@@ -1,47 +1,62 @@
 [
     {
-        "id":1,
-        "nombreSuperHeroe":"Spiderman",
-        "nombreReal":"Peter Parker",
+        "id":4,
+        "nombreSuperHeroe":"Black Widow",
+        "nombreReal":"Natasha Romanoff",
         "nombreSociedad":"Vigilante",
-        "edad":25,
+        "edad":33,
         "planetaOrigen":"Tierra",
-        "debilidad":"Radioactiva",
+        "debilidad":"Ninguna conocida",
         "poder":[
-                    "Trepar paredes","Sentido arácnido","Super fuerza","Agilidad"
+                    "Maestria en combate","Espionaje"
                 ],
-        "habilidadEspecial":"Redes de telaraña",
-        "aliado":["Iroman"],
-        "enemigo":["Duende Verde"]
+        "habilidadEspecial":"Entrenamiento de élite",
+        "aliado":["Hawkeye"],
+        "enemigo":["Taskmaster"]
     },
      {
-        "id":2,
-        "nombreSuperHeroe":"Iroman",
-        "nombreReal":"Tony Stark",
+        "id":5,
+        "nombreSuperHeroe":"Hulk",
+        "nombreReal":"Bruce Banner",
         "nombreSociedad":"Vigilante",
-        "edad":45,
+        "edad":40,
         "planetaOrigen":"Tierra",
-        "debilidad":"Dependiente de la tecnologia",
+        "debilidad":"Control emocional",
         "poder":[
-                    "Armadura blindada","Volar","Láseres"
+                    "Fuerza bruta","Resistencia"
                 ],
-        "habilidadEspecial":"Ingeniería avanzada",
-        "aliado":["Spiderman"],
-        "enemigo":["Mandarín"]
+        "habilidadEspecial":"Regeneración rápida",
+        "aliado":["Ironman"],
+        "enemigo":["Loki"]
     },
      {
-        "id":3,
-        "nombreSuperHeroe":"Thor",
-        "nombreReal":"Thor Odison",
+        "id":6,
+        "nombreSuperHeroe":"Captain America",
+        "nombreReal":"Steve Rogers",
         "nombreSociedad":"Dios del Trueno",
-        "edad":1000,
-        "planetaOrigen":"Asgard",
-        "debilidad":"Destruir su martillo",
+        "edad":103,
+        "planetaOrigen":"Tierra",
+        "debilidad":"No tiene habilidades sobrehumanas",
         "poder":[
-                    "Controlar el trueno","Fuerza sobrehumana","Inmortal"
+                    "Fuerza aumentada","Agilidad"
                 ],
-        "habilidadEspecial":"Invocación de tormentas",
-        "aliado":["Loki"],
-        "enemigo":["Hela"]
+        "habilidadEspecial":"Escudo indestructible",
+        "aliado":["Bucky Barnes"],
+        "enemigo":["Red Skull"]
+    },
+    {
+        "id":7,
+        "nombreSuperHeroe":"Doctor Strange",
+        "nombreReal":"Stephen Strange",
+        "nombreSociedad":"Hechicero Supremo",
+        "edad":40,
+        "planetaOrigen":"Tierra",
+        "debilidad":"Desconocida",
+        "poder":[
+                    "Magia","Teletransportación"
+                ],
+        "habilidadEspecial":"Hechizos poderosos",
+        "aliado":["Wong"],
+        "enemigo":["Dormammu"]
     }
 ]
