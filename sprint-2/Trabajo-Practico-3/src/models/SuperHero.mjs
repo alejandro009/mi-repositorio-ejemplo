@@ -11,6 +11,6 @@ const superheroSchema = new mongoose.Schema({
     enemigos: [String],
     createdAt: { type: Date, default: Date.now }
 
-}, { collection: 'Grupo-16' })
+}, { collection: 'Grupo-03' })
 
 export default mongoose.model('SuperHero', superheroSchema)
