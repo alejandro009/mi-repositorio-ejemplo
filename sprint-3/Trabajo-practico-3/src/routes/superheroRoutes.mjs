@@ -13,6 +13,11 @@ import {
 
 const router = express.Router()
 
+router.use((req, res, next) => {
+    console.log(`Solicitud entrante: ${req.method} ${req.url}`);
+    next();
+  });
+
 router.get('/heroes', obtenerTodosLosSuperheroesController)
 router.get('/heroes/agregar', formAgregarSuperheroeController)
 // router.post('/heroes',agregarSuperheroeController)
@@ -40,6 +45,6 @@ body('edad')
 ], agregarSuperheroeController)
 router.get('/heroes/:id/editar',obtenerSuperheroePorIdController)
 router.post('/heroes/:id/editar', editarSuperHeroeController)
-router.delete('/heroes/:id', eliminarSuperheroePorIdController)
+router.post('/heroes/:id/eliminar', eliminarSuperheroePorIdController)
 
 export default router

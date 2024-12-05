@@ -118,9 +118,8 @@
         <header>
           <h1>Agregar SuperHeroes</h1>
         </header>
-
         <form
-          action="<%= hero ? `/api/heroes/${hero.id}/editar` : '/api/heroes' %>"
+          action="<%= hero.nombreReal ? `/api/heroes/${hero.id}/editar` : '/api/heroes' %>"
           method="POST"
         >
           <div class="miInput">
