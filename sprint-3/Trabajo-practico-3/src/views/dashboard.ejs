@@ -107,15 +107,15 @@
           <tbody>
             <% superheroes.forEach(superheroe => { %>
             <tr>
-              <td><%= superheroe.nombreSuperHeroe %></td>
+              <td><%= superheroe.nombreSuperheroe %></td>
               <td><%= superheroe.nombreReal %></td>
               <td><%= superheroe.edad %></td>
               <td><%= superheroe.planetaOrigen %></td>
               <td>
-                <a class="editar" href="/heroes/<%=superheroe.id%>/editar"
+                <a class="editar" href="/api/heroes/<%=superheroe.id%>/editar"
                   >Editar
                 </a>
-                <a class="eliminar" href="/heroes/<%=superheroe.id%>/eliminar"
+                <a class="eliminar" href="/api/heroes/<%=superheroe.id%>/eliminar"
                   >Eliminar
                 </a>
               </td>

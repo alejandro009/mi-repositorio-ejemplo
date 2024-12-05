@@ -8,10 +8,14 @@ class SuperHeroRepository extends IRepository {
         return await SuperHero.find({})
     }
 
+    async obtenerPorId(id){
+        return await SuperHero.findById({_id:id})
+    }
+
     async agregar(data) {
 
         return await SuperHero.create({
-            nombreSuperHeroe: data.nombreSuperHeroe,
+            nombreSuperheroe: data.nombreSuperheroe,
             nombreReal: data.nombreReal,
             edad: data.edad,
             planetaOrigen: data.planetaOrigen,
@@ -31,9 +35,7 @@ class SuperHeroRepository extends IRepository {
         return await SuperHero.findOneAndDelete({ _id: id })
     }
 
-    async eliminarPorNombre(nombre){
-        return await SuperHero.findOneAndDelete({ nombreSuperHeroe: nombre })
-    }
+   
 }
 
 export default new SuperHeroRepository()

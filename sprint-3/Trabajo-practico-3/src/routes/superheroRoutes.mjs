@@ -6,10 +6,9 @@ import {
     obtenerTodosLosSuperheroesController,
     agregarSuperheroeController,
     editarSuperHeroeController,
-    eliminarSuperheroePorIdController,
-    eliminarSuperheroePorNombreController,
     formAgregarSuperheroeController,
-    obtenerSuperheroePorIdController
+    obtenerSuperheroePorIdController,
+    eliminarSuperheroePorIdController
 } from '../controllers/superheroesController.mjs'
 
 const router = express.Router()
@@ -17,7 +16,7 @@ const router = express.Router()
 router.get('/heroes', obtenerTodosLosSuperheroesController)
 router.get('/heroes/agregar', formAgregarSuperheroeController)
 // router.post('/heroes',agregarSuperheroeController)
-router.post('/heroes', [body('nombreSuperHeroe')
+router.post('/heroes', [body('nombreSuperheroe')
     .notEmpty()
     .withMessage('El nombre de Superheroe es requerido')
     .trim()
@@ -40,7 +39,7 @@ body('edad')
 //     .isLength({ max: 60 }).withMessage('Cada poder no puede exceder los 60 caracteres.'),
 ], agregarSuperheroeController)
 router.get('/heroes/:id/editar',obtenerSuperheroePorIdController)
-router.put('/heroes/:id/editar', editarSuperHeroeController)
-// router.delete('/heroes/:id', eliminarSuperheroePorIdController)
-// router.delete('/heroes/eliminar/:nombre', eliminarSuperheroePorNombreController)
+router.post('/heroes/:id/editar', editarSuperHeroeController)
+router.delete('/heroes/:id', eliminarSuperheroePorIdController)
+
 export default router

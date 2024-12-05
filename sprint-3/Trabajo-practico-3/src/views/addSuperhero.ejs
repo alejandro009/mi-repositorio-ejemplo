@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>SuperHeores</title>
-   
+
     <style>
       body {
         margin: 0;
@@ -118,41 +118,86 @@
         <header>
           <h1>Agregar SuperHeroes</h1>
         </header>
-       <h1><%= hero.nombreSuperHeroe  %></h1> 
-        <form action="/api/heroes" method="POST">
+
+        <form
+          action="<%= hero ? `/api/heroes/${hero.id}/editar` : '/api/heroes' %>"
+          method="POST"
+        >
           <div class="miInput">
-            <label for="nombreSuperHeroe"> Superheroe </label>
-            <input type="text" required id="nombreSuperHeroe" name="nombreSuperHeroe"  />
+            <label for="nombreSuperheroe"> Superheroe </label>
+            <input
+              type="text"
+              required
+              id="nombreSuperheroe"
+              name="nombreSuperheroe"
+              value="<%= hero? hero.nombreSuperheroe : '' %>"
+            />
           </div>
           <div class="miInput">
             <label for="nombreReal"> Nombre real </label>
-            <input type="text" required name="nombreReal" />
+            <input
+              type="text"
+              required
+              name="nombreReal"
+              value="<%= hero? hero.nombreReal : '' %>"
+            />
           </div>
           <div class="miInput">
             <label for="edad"> Edad </label>
-            <input type="number" required name="edad" min="0" />
+            <input
+              type="number"
+              required
+              name="edad"
+              min="0"
+              value="<%= hero? hero.edad : '' %>"
+            />
           </div>
           <div class="miInput">
             <label for="planetaOrigen"> Planeta de Origen </label>
-            <input type="text" required name="planetaOrigen" />
+            <input
+              type="text"
+              required
+              name="planetaOrigen"
+              value="<%= hero? hero.planetaOrigen : '' %>"
+            />
           </div>
 
           <div class="miInput">
             <label for="poderes">Poderes </label>
-            <input type="text" required name="poderes" />
+            <input
+              type="text"
+              required
+              name="poderes"
+              value="<%= hero? hero.poderes : '' %>"
+            />
           </div>
           <div class="miInput">
             <label for="debilidad"> Debilidad </label>
-            <input type="text" required name="debilidad"  />
+            <input
+              type="text"
+              required
+              name="debilidad"
+              value="<%= hero? hero.debilidad : '' %>"
+            />
           </div>
           <div class="miInput">
             <label for="aliados"> Aliados</label>
-            <input type="text" required name="aliados" />
+            <input
+              type="text"
+              required
+              name="aliados"
+              value="<%= hero? hero.aliados : '' %>"
+            />
           </div>
 
           <div class="miInput">
             <label for="enemigos"> Enemigos </label>
-            <input type="text" required name="enemigos" />
+            <input
+              type="text"
+              required
+              name="enemigos"
+              value="<%= hero? hero.enemigos : '' %>"
+            />
           </div>
 
           <button type="submit">Cargar Superheroe</button>

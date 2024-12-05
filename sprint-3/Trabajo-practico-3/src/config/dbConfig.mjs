@@ -1,7 +1,7 @@
 import mongoose from 'mongoose'
 export async function connectDB() {
     try {
-        await mongoose.connect('mongodb+srv://Grupo-16:grupo16@cursadanodejs.ls9ii.mongodb.net/Node-js', {
+        await mongoose.connect('mongodb+srv://Grupo-03:grupo03@cursadanodejs.ls9ii.mongodb.net/Node-js', {
             useNewUrlParser: true,
             useUnifiedTopology: true
         })

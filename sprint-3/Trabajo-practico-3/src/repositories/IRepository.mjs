@@ -1,9 +1,11 @@
 class IRepository {
 
     obtenerTodos() {
-        throw new Error("Metodo 'obtenerPorId()' no implementado")
+        throw new Error("Metodo 'obtenerTodos()' no implementado")
     }
-
+    obtenerPorId(id){
+        throw new Error("Metodo 'obtenerPorId(id)' no implementado")
+    }
     agregar() {
         throw new Error("Metodo 'agregar()' no implementado")
     }
@@ -14,9 +16,7 @@ class IRepository {
     eliminarPorId(id) {
         throw new Error("Metodo 'eliminarPorId(id)' no implementado")
     }
-    eliminarPorNombre(nombre){
-        throw new Error("Metodo 'eliminarPorNombre(nombre)' no implementado")
-    }
+   
 
 }
 
