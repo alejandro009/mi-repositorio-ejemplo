@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>SuperHeores</title>
+    <link rel="stylesheet" href="/dashboard.css">
+  </head>
+
+  <body>
+    <main>
+      <section>
+        <header>
+          <h1>SuperHeroes Cargados</h1>
+        </header>
+        <table>
+          <thead>
+            <th>SuperHeroe</th>
+            <th>Nombre Real</th>
+            <th>Edad</th>
+            <th>Planeta de Origen</th>
+            <th>Opciones</th>
+          </thead>
+          <tbody>
+            <% superheroes.forEach(superheroe=> { %>
+            <tr>
+              <td><%= superheroe.nombreSuperheroe %></td>
+              <td><%= superheroe.nombreReal %></td>
+              <td><%= superheroe.edad %></td>
+              <td><%= superheroe.planetaOrigen %></td>
+              <td>
+                <a class="editar" href="/api/heroes/<%=superheroe.id%>/editar"
+                  >Editar</a
+                >
+                <form
+                  action="<%=`/api/heroes/${superheroe.id}/eliminar`%>"
+                  method="POST"
+                >
+                  <button
+                    type="submit"
+                    class="btn-delete eliminar"
+                    onclick="return confirm('¿Estás seguro de que quieres eliminar este superhéroe?');"
+                  >
+                    Eliminar
+                  </button>
+                </form>
+              </td>
+            </tr>
+            <% }) %>
+          </tbody>
+        </table>
+        <a class="agregar" href="/api/heroes/agregar"> Agregar SuperHeroe </a>
+      </section>
+    </main>
+  </body>
+</html>
